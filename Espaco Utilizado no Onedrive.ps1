@@ -4,9 +4,10 @@ Install-Module -Name Microsoft.Online.SharePoint.PowerShell
 Install-Module -Name MSOnline
 Install-Module -Name AzureAD
 Connect-MSOLService
-Connect-SPOService https://badesulcombr-admin.sharepoint.com
+Connect-SPOService https://empresacombr-admin.sharepoint.com
+$userName = "Anderson.Jose@empresa.com.br
 
-$urlPrefix="https://badesulcombr-my.sharepoint.com/personal/"
+$urlPrefix="https://empresacombr-my.sharepoint.com/personal/"
 
 $url=$urlPrefix + $userName.Replace(".","_").Replace("@","_")
 
