@@ -22,4 +22,9 @@ if (Test-Path $baseKey) {
             Write-Host "Subchave removida: $fullPath"
         } catch {
             Write-Host "Erro ao remover: $fullPath - $_"
-        }}}}}}
+
+        }}}}}
+
+#Executa o script na máquina remota
+Invoke-Command -ComputerName $Computador -Credential $Credencial -ScriptBlock $ScriptBlock
+}
