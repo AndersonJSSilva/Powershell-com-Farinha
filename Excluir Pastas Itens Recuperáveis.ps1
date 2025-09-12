@@ -33,8 +33,9 @@ https://learn.microsoft.com/pt-br/purview/ediscovery-use-content-search-for-targ
 Get-MailboxStatistics -Identity Usuario@dominio.com.br | Select TotalDeletedItemSize, TotalItemSize, DeletedItemCount
 
 #Deletar dados de pesquisa realizada
-New-ComplianceSearchAction -SearchName "Discovery Holds" -Purge -PurgeType HardDelete -confirm:$false
-Remove-ComplianceSearchAction "Discovery Holds"
+Get-ComplianceSearch
+Start-ComplianceSearch -Identity "Testeanderson"
+New-ComplianceSearchAction -SearchName "Testeanderson" -Purge -PurgeType HardDelete -confirm:$false
 Get-ComplianceSearchAction
 
 ####Limpar Discovery Holds####
@@ -63,4 +64,5 @@ Set-Mailbox Usuario@dominio.com.br -RemoveDelayReleaseHoldApplied
 
 #Rodar 2 vezes
 Start-Managedfolderassistant -Identity Usuario@dominio.com.br
+
 Start-Managedfolderassistant -Identity Usuario@dominio.com.br
