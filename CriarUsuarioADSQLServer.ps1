@@ -48,7 +48,7 @@ New-ADUser `
 -EmployeeID $Contador `
 -EmployeeNumber $Matricula `
 -SamAccountName $LoginMinusculo `
--UserPrincipalName "$LoginMinusculo@ibratec.com.br" `
+-UserPrincipalName "$LoginMinusculo@dominio.com.br" `
 -AccountPassword (ConvertTo-SecureString "SenhaPadrão123!" -AsPlainText -Force) `
 -Enabled $true `
 -Path "OU=TESTE,OU=Usuarios,DC=Teste,DC=local"
