@@ -34,7 +34,7 @@ $NomeCompleto = $Nome.split();
 $PrimeiroNome = $NomeCompleto[0]
 $PrimeiroEspaco = $Nome.IndexOf(' ')
 $Sobrenome = $Nome.Substring($PrimeiroEspaco+1)
-$Empresa = Microsoft 365 na Veia LTDA"
+$Empresa = "Microsoft 365 na Veia LTDA"
 $Login = $NomeCompleto[0]+"."+$NomeCompleto[-1]
 $LoginMinusculo = $Login.ToLower()
 New-ADUser `
