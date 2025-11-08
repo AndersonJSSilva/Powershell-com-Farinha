@@ -24,10 +24,10 @@
 #Export-Certificate -Cert $certinstall -FilePath $exportPath
 
 #Variáveis Globais
-$ClientId = "0fa0dd54-3af8-4f93-9dcd-acbc24156585"
-$ClientSecret = "6Tr8Q~ZOZJ_.gyduvo1Y4kVbmXs2P4pGVKGcsc~Z"
-$TenantId = "1668c301-d212-4f0f-a4e4-4431d64bc0b7"
-$Thumbprint = "18ddd98b20c166f3fc487dd4db2afece9d8536fb"
+$ClientId = "0fa0xx54-3axx-4f93-9xxd-acbc24156585"
+$ClientSecret = "xxr8QxxOZJ_.gyduvoxxxxVbmXs2P4pGxxxxsc~Z"
+$TenantId = "166xxx01-d212-xx0f-axx4-4431d64bc0b7"
+$Thumbprint = "18ddd98b20c166f3fxx87xx4db2afece9d8536fb"
 $Data = Get-Date -Format "dd/MM/yyyy - HH:mm:ss"
 $NovosUsuariosPrimarios = @();
 
@@ -127,7 +127,7 @@ $WindowsDevices = $Devices | Where-Object {
         $_.OperatingSystemVersion -like "11*"
     )
 }
-#$WindowsDevices = @("bds05311171","BDS0531104");
+#$WindowsDevices = @("Note1311171","Note131104");
 
 #Identificação de Usuários Ativos
 Foreach($WindowsDevice in $WindowsDevices){
@@ -166,4 +166,5 @@ if ($Device) {
                     else { 
                     Set-NewPrimaryUser -DeviceID $Device.id -UserID $User.id
                     $Data +" - "+ $User.displayName +" - "+ $Device.deviceName >> "C:\Temp\Usuários Primários\NovosUsuariosPrimarios.txt"
+
                     }}}}}}}
